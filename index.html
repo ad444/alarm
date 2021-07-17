@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="alarm.css" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+        <div id="main" class="row">
+            <div id="submain" class="col-12 col-md-9 col-lg-6 mx-auto">
+                <div class="container mobileview">
+                    <!-- Modal for initial UI-->
+                    <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+
+                                <div class="modal-body text-center">
+                                    <h2 class="d-inline">Set your alarms</h2>
+                                </div>
+                                <div class="modal-footer px-0 py-3">
+                                    <button type="button" class="closeModal nextAlarmsBtn" data-dismiss="modal"
+                                        onclick="homePage()"><i class="fa fa-arrow-up"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal for initial UI End-->
+                    <div class="row">
+                        <div id="titleContainer" class="col-12">
+                            <h3 id="title">Alarms</h3>
+                        </div>
+                    </div>
+                    <div id="alarmContent" class="row mt-4 mt-lg-3 mt-xl-4">
+                        <div id="settedAlarm" class="col-10 mx-auto"></div>
+                    </div>
+                    <div id="setAlarmContent" class="row mt-4 mt-lg-3 mt-xl-4">
+                        <div class="col-12">
+                            <button id="backBtn"><i id="backBtnIcon" class="fa fa-arrow-left"></i></button>
+                        </div>
+                        <div class="col-12 timeContainer">
+                            <div class="row">
+                                <div class="col-4 col-xs-4 col-sm-4">
+                                    <div id="setHourContainer">
+                                        <input id="setHour" type="text" name="hour" placeholder="00"
+                                            autocomplete="off" />
+                                        <p id="hourText">Hour</p>
+                                    </div>
+                                </div>
+                                <div class="col-4 col-xs-4 col-sm-4">
+                                    <div id="setMinuteContainer">
+                                        <input id="setMinute" type="text" name="minute" placeholder="00"
+                                            autocomplete="off" />
+                                        <p id="minuteText">Minute</p>
+                                    </div>
+                                </div>
+                                <div class="col-4 col-xs-4 col-sm-4">
+                                    <div id="ampm">
+                                        <p id="AM">AM</p>
+                                        <p id="PM">PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3 mt-lg-2 mt-xl-3" id="addAlarmContainer">
+                        <div id="addAlarmBtnContainer" class="col-12 mx-auto">
+                            <button id="addAlarmBtn"><i class="fa fa-plus"></i></button>
+                            <button id="setAlarmBtn">Set Alarm</button>
+                        </div>
+                    </div>
+                    <!-- Alarm Display Modal -->
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body text-center">
+                                    <h2 class="d-inline alarmTitle">09090</h2>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="closeModal" data-dismiss="modal"
+                                        onclick="pauseAlarm(this)"><i class="fa fa-close"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Alarm Display Modal End-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="alarm.js"></script>
+</body>
+
+</html>

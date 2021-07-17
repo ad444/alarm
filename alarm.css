@@ -1,0 +1,560 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Scroll bar css*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #111111;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #240090;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #3500D3;
+}
+/*Scroll bar css end*/
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #111111;
+    color: #F5F5F5;
+}
+
+.container {
+    height: 100%;
+    padding: 0px 15px;
+}
+
+#main {
+    height: 100%;
+}
+
+#submain {
+    height: 100%;
+}
+
+#titleContainer {
+    background-color: #190061;
+    border:none;
+    border-radius:3px;
+    color: #F5F5F5;
+    margin: 0px;
+}
+
+#title {
+    padding: 10px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#alarmContent {
+    height: 70%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.alarmBody {
+    background-color: #282828;
+    border: none;
+    border-radius: 3px;
+}
+
+.alarmName {
+    margin: 10px 0px;
+    padding: 5px 0px;
+}
+
+.sidetogglebutton {
+    width: 40px;
+    height: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 1.5s;
+    background-color: black;
+    float: right;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider {
+    width: 50%;
+    height: 20px;
+    display: inline-block;
+    border:none;
+    border-radius: 50%;
+    position: relative;
+    bottom: 50%;
+    left: 100%;
+    transform: translateX(-100%);
+    cursor: pointer;
+    transition: all 0.5s;
+    background-color: blue;
+}
+
+.fa-trash {
+    font-size: 24px;
+    color: #ff0000;
+    position: relative;
+    left: 110%;
+    bottom: 15%;
+    opacity: 0.9;
+    cursor:pointer;
+}
+
+.fa-trash:hover{
+    opacity: 1;
+}
+
+.deleteAlarm {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 15px;
+    background-color: #240090;
+    color: #F5F5F5;
+    border: none;
+    border-radius: 3px;
+    float: right;
+    margin: 10px 0px;
+}
+
+.pauseAlarm {
+    display: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 15px;
+    background-color: #240090;
+    color: #F5F5F5;
+    border: none;
+    border-radius: 3px;
+    float: right;
+    margin: 10px 0px;
+}
+
+.alarmTime {
+    display: none;
+}
+
+#addAlarmBtn {
+    border-radius: 50%;
+    padding: 0px;
+    color: #F5F5F5;
+    border: none;
+    background-color: #240090;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s;
+    outline: none;
+    cursor: pointer;
+}
+
+#addAlarmBtn:hover {
+    box-shadow: 0.5px 0.5px 2px 5px #3500D3;
+}
+
+#addAlarmBtn:focus {
+    box-shadow: 0.5px 0.5px 2px 5px #3500D3;
+}
+
+#backBtn {
+    color: #F5F5F5;
+    border: none;
+    background-color: #111111;
+    cursor: default;
+    outline:none;
+    opacity:0.9;
+}
+
+#backBtnIcon {
+    cursor: pointer;
+    opacity:0.8;
+}
+
+#backBtnIcon:hover{
+    opacity:1;
+}
+
+#setAlarmBtn {
+    display: none;
+    padding: 5px 10px;
+    color: #F5F5F5;
+    border: none;
+    border-radius: 3px;
+    background-color: #240090;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s;
+    outline:none;
+    cursor: pointer;
+}
+
+#setAlarmBtn:hover {
+    box-shadow: 1px 1px 3px 5px #3500D3;
+}
+
+#setAlarmBtn:focus {
+    box-shadow: 1px 1px 3px 5px #3500D3;
+}
+
+#setAlarmContent {
+    height: 70%;
+    display: none;
+}
+
+.timeContainer {
+    position: relative;
+    top: 40%;
+    transform: translateY(-40%);
+}
+
+#setHourContainer {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#setMinuteContainer {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#setHour {
+    color: #F5F5F5;
+    width: 50%;
+    background-color: #111111;
+    border: none;
+    border-bottom: 2px solid #F5F5F5;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#setMinute {
+    color: #F5F5F5;
+    width: 50%;
+    background-color: #111111;
+    border: none;
+    border-bottom: 2px solid #F5F5F5;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#setHour,
+#setMinute:focus {
+    outline: none;
+}
+
+#hourText {
+    width: auto;
+    font-size: 20px;
+    
+}
+
+#minuteText {
+    width: auto;
+    font-size: 20px;
+    
+}
+
+#ampm {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#AM,
+#PM {
+    color: #240090;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+#AM:hover {
+    color: #3500D3;
+}
+
+#PM:hover {
+    color: #3500D3;
+}
+
+#addAlarmContainer{
+    margin:0px;
+    position:fixed;
+    bottom:2%;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+#exampleModalCenter1 {
+    margin: 0px;
+    padding:0px;
+    height: 100%;
+    width: 100%; 
+}
+
+.nextAlarmsBtn {
+    cursor: pointer;
+    animation: upandDown 0.5s infinite alternate;
+}
+
+#exampleModalCenter {
+    margin: 0px;
+    padding:0px;
+    height: 100%;
+    width: 100%;
+}
+
+.modal-dialog {
+    margin: 0px auto;
+    height: 100%;
+    width: 100%;
+}
+
+.modal-content {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: #282828;
+    color: #F5F5F5;
+    border:2px solid #240090;
+}
+
+.alarmTitle {
+    position: relative;
+    top: 10%;
+    transform: translateY(-10%);
+}
+
+.closeModal {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 0px;
+    color: #F5F5F5;
+    border: none;
+    background-color: #240090;
+    margin: 0px;
+    position: relative;
+    right: 50%;
+    transform: translateX(50%);
+    transition: all 0.3s;
+    outline: none;
+    cursor: pointer;
+}
+
+.closeModal:focus {
+    border: none;
+    outline: none;
+    box-shadow: 0.5px 0.5px 2px 5px #3500D3;
+}
+
+.closeModal:hover {
+    box-shadow: 0.5px 0.5px 2px 5px #3500D3;
+}
+
+@media screen and (max-width : 425px) {
+    .mobileview {
+        width: 100%;
+    } 
+    #setHour,
+    #setMinute {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    #hourText, #minuteText {
+        margin: 0px;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    #AM,
+    #PM {
+        margin: 0px;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    #setAlarmBtn {
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    #backBtn {
+        font-size: 16px;
+        text-align: center;
+        line-height: 50px;
+        font-weight: 500;
+    }
+
+    #addAlarmBtn {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+    }
+}
+
+@media screen and (min-width : 425px) and (max-width : 425px) {
+    .mobileview {
+        width: 100%;
+    } 
+    #setHour,
+    #setMinute {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    #hourText,
+    #minuteText {
+        margin: 0px;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    #AM,
+    #PM {
+        margin: 0px;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    #setAlarmBtn {
+        font-size: 18px; 
+        font-weight: lighter;
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width : 425px) {
+    .fa-trash {
+        left: 115%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@media screen and (min-width : 425px) and (max-width : 768px) {
+    .mobileview {
+        width: 90%;
+    }
+
+    #setHour,
+    #setMinute {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    #hourText, #minuteText {
+        margin: 0px;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    #AM,
+    #PM {
+        margin: 0px;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    #setAlarmBtn {
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    #backBtn {
+        font-size: 16px;
+        text-align: center;
+        line-height: 50px;
+        font-weight: 500;
+    }
+
+    #addAlarmBtn {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+    }
+
+}
+
+@media screen and (min-width : 768px) {
+    .mobileview {
+        width: 90%;
+    }
+    #setHour,
+    #setMinute {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    #hourText,
+    #minuteText {
+        margin: 0px;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    #AM,
+    #PM {
+        margin: 0px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    #setAlarmBtn {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    #backBtn {
+        font-size: 18px;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    #addAlarmBtn {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    #exampleModalCenter1, #exampleModalCenter {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width : 1024px) {
+    .mobileview {
+        width: 90%;
+    }
+    #setAlarmBtn {
+        font-size: 20px;
+        font-weight: 500;
+    }
+}

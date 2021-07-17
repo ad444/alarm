@@ -338,7 +338,7 @@ function setUnsetAlarm(z) {
 
         z.style.left = "100%";
         z.style.transform = "translateX(-100%)";
-        z.style.backgroundColor = "#3500D3";
+        z.style.backgroundColor = "#0000FF";
 
         let alarmBody = document.querySelectorAll("#AlarmBody");
 
@@ -375,7 +375,7 @@ function setUnsetAlarm(z) {
 
         z.style.left = "0%";
         z.style.transform = "translateX(0%)";
-        z.style.backgroundColor = "#240090";
+        z.style.backgroundColor = "#3500D3";
 
         let alarmBody = document.querySelectorAll("#AlarmBody");
 

@@ -18,10 +18,6 @@ function homePage() {
 
         let alarmTime = document.querySelectorAll(".alarmTime");
 
-        // let deleteAlarm = document.querySelectorAll(".deleteAlarm");
-
-        // let pauseAlarm = document.querySelectorAll(".pauseAlarm");
-
         let currentMilliSeconds;
         let setTimeMilliseconds;
         let hour;
@@ -37,13 +33,8 @@ function homePage() {
             setTimeOutArray.push(elem.className.charAt(elem.className.length - 1));
 
             setTimeMilliseconds = Number(elem.innerHTML);
-
-            // let tempAlarmBody = elem.parentElement.parentElement.parentElement.parentNode;
-            //  
-
-
+           
             let setunsetbtn = elem.parentElement.nextElementSibling.children[0].children[0];
-
 
             if (currentMilliSeconds < setTimeMilliseconds) {
                 if (setunsetbtn.style.left !== "0%") {
@@ -114,7 +105,7 @@ am.addEventListener("click", () => {
     ampmvalue = "am";
     am.style.color = "#3500D3";
     pm.style.color = "#240090";
-    pm.style.fontWeight = "lighter";
+    pm.style.fontWeight = "400";
     am.style.fontWeight = "bold";
 });
 pm.addEventListener("click", () => {
@@ -122,7 +113,7 @@ pm.addEventListener("click", () => {
     ampmvalue = "pm";
     pm.style.color = "#3500D3";
     am.style.color = "#240090";
-    am.style.fontWeight = "lighter";
+    am.style.fontWeight = "400";
     pm.style.fontWeight = "bold";
 });
 
